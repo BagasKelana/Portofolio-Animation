@@ -1,0 +1,42 @@
+.tech {
+  position: relative;
+  background-color: var(--inside-color);
+  color: var(--secondary-color);
+  border: var(--border-style);
+  display: flex;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 1.6rem;
+  transition: all ease-in-out 0.3s;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.1rem;
+
+  .techContent {
+    position: relative;
+    background-color: var(--inside-color);
+    border-radius: inherit;
+    display: flex;
+    padding: 0.4rem 1.6rem;
+  }
+}
+
+.tech:hover:before {
+  opacity: 1;
+}
+
+.tech:before {
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    rgb(255, 215, 137) 50%,
+    transparent 99%
+  );
+  border-radius: inherit;
+  content: '';
+  inset: 0px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 400ms;
+  z-index: 0;
+}

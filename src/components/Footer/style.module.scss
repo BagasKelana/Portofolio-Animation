@@ -1,0 +1,36 @@
+.footer {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+
+  left: 0;
+
+  .nameText {
+    position: fixed;
+    right: 2.813rem;
+    color: var(--tertiary-color);
+    bottom: 2rem;
+    letter-spacing: 17%;
+    font-size: 12px;
+  }
+
+  .socialMenu {
+    position: fixed;
+    left: 3.563rem;
+    bottom: 2rem;
+
+    .listsMenu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: #dfdfdf;
+      }
+    }
+  }
+
+  .socialMenu li:not(:last-child) {
+    margin-bottom: 1.625rem;
+  }
+}

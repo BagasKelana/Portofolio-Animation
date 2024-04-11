@@ -1,0 +1,56 @@
+.navbar {
+  position: fixed;
+  z-index: 50;
+  width: 100dvw;
+  left: 0;
+  top: 2rem;
+  left: 0;
+  color: white;
+  mix-blend-mode: exclusion;
+
+  .logo {
+    top: 3rem;
+    position: fixed;
+    left: 3rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: white;
+  }
+
+  .navMenu {
+    position: fixed;
+    right: 3rem;
+    top: 3rem;
+
+    .listsMenu {
+      display: flex;
+      margin: 0;
+      list-style-type: none;
+      padding: 0;
+      position: relative;
+      transform-origin: 50% 50% 0;
+      gap: 1.6rem;
+      justify-content: center;
+
+      li {
+        position: relative;
+        width: 7rem;
+        padding: 0.4rem 0rem;
+        transform-origin: 50% 50% 0;
+        font-size: 1.2rem;
+        letter-spacing: 17%;
+        font-weight: bold;
+        text-align: left;
+
+        span {
+          width: fit-content;
+          display: inline-block;
+          padding: 0.05rem 0.25rem;
+          height: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

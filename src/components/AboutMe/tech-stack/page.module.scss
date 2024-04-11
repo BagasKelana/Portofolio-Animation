@@ -1,0 +1,21 @@
+.techStackContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: fit-content;
+  border: var(--border-style);
+  padding: 3rem 3rem;
+  background-color: var(--card-color);
+  border-radius: 1.6rem;
+}
+
+.techStack {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 0.6rem;
+  position: relative;
+}
