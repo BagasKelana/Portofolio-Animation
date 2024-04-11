@@ -1,90 +1,68 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { PanInfo, motion } from 'framer-motion';
+import React, { useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay, { AutoplayType } from 'embla-carousel-autoplay';
 import styles from './page.module.scss';
-import Image from 'next/image';
 import gallerys from '@/app/assets/static-images/images';
+import Image from 'next/image';
+import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 
-const CarouselGallery = () => {
-  const container = useRef<HTMLDivElement | null>(null);
-  const carousel = useRef<HTMLDivElement | null>(null);
-  const [active, setActive] = useState(0);
+export default function CarouselGallery() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ playOnInit: true, delay: 2000 })
+  ]);
 
-  const width = (container.current && container.current.offsetWidth) || 611;
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
 
-  function clamp(number: number, lower: number, upper: number) {
-    return number < lower ? lower : number > upper ? upper : number;
-  }
+  const handleOnMouseEnter = useCallback(() => {
+    const autoPlay = emblaApi?.plugins()?.autoplay as AutoplayType;
+    if (!autoPlay) return;
 
-  const dragEndHandler = (
-    event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
-  ) => {
-    const offset = info.offset.x;
+    const playOrStop = autoPlay.stop;
+    playOrStop();
+  }, [emblaApi]);
 
-    if (Math.abs(offset) > 50) {
-      const direction = offset < 0 ? 1 : -1;
-      setActive((active) =>
-        clamp(active + direction, 0, gallerys.length - 1 )
-      );
-    }
-  };
+  const handleOnMouseLeave = useCallback(() => {
+    const autoPlay = emblaApi?.plugins()?.autoplay as AutoplayType;
+    if (!autoPlay) return;
+
+    const playOrStop = autoPlay.play;
+    playOrStop();
+  }, [emblaApi]);
 
   return (
-    <div ref={container} className={styles.carouselContainer}>
-      <div className={styles.dotContainer}>
-        {Array.from({ length: gallerys.length }).map((_, i) => (
-          <motion.div
-            onClick={() => setActive(i)}
-            key={i}
-            className={styles.dot}
-            initial={false}
-            animate={{
-              scale: active === i ? 1.5 : 1,
-              opacity: active === i ? 1 : 0.5
-            }}
-          />
-        ))}
-      </div>
-      <motion.div
-        onDragEnd={dragEndHandler}
-        ref={carousel}
-        dragConstraints={container}
-        drag="x"
-        className={styles.carouselGallery}
-        dragTransition={{ bounceStiffness: 500, bounceDamping: 30 }}
-        dragElastic={0.2}
-        animate={{
-          x: -1 * active * width
-        }}
-        transition={{
-          type: 'easeInOut'
-        }}
+    <div className={styles.carouselContainer}>
+      <div
+        onMouseEnter={handleOnMouseEnter}
+        onMouseLeave={handleOnMouseLeave}
+        className={styles.embla}
+        ref={emblaRef}
       >
-        {gallerys.map((gallery, index) => (
-          <motion.div key={index}>
-            <Image
-              style={{ width }}
-              className={styles.imgSlider}
-              src={gallery}
-              alt="image of gallery"
-            />
-          </motion.div>
-        ))}
-        {gallerys.map((gallery, index) => (
-          <motion.div key={index + 6}>
-            <Image
-              style={{ width }}
-              className={styles.imgSlider}
-              src={gallery}
-              alt="image of gallery"
-            />
-          </motion.div>
-        ))}
-      </motion.div>
+        <div className={styles.embla__container}>
+          {gallerys.map((gallery) => (
+            <div key={gallery.src} className={styles.embla__slide}>
+              <Image src={gallery} alt="gallery" />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className={styles.embla__dots}>
+        {scrollSnaps.map((_, index) => {
+          return (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={`${styles['embla__dot']} ${
+                index === selectedIndex ? styles['embla__dot__selected'] : ''
+              }`}
+            >
+              <span className={styles.dot} />
+            </DotButton>
+          );
+        })}
+      </div>
     </div>
   );
-};
-
-export default CarouselGallery;
+}
