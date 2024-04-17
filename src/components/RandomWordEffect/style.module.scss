@@ -1,0 +1,11 @@
+.containerRandomWord {
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.containerRandomWord > span {
+  font-size: 2rem;
+  white-space: nowrap;
+}

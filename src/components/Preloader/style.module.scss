@@ -6,17 +6,23 @@
   justify-content: center;
   position: fixed;
   z-index: 99;
-  overflow: hidden;
-  background-color: white;
-
+  background-color: var(--background-color);
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+    path {
+      fill: var(--background-color);
+    }
+  }
   p {
-    z-index: 2;
     display: flex;
     color: white;
     font-size: 42px;
     align-items: center;
     position: absolute;
-    z-index: 3;
+    z-index: 1;
     span {
       display: block;
       width: 10px;
@@ -24,30 +30,6 @@
       background-color: white;
       border-radius: 50%;
       margin-right: 10px;
-    }
-  }
-  .overlay {
-    display: flex;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    background-color: rgb(32, 32, 32);
-    opacity: 10%;
-    position: absolute;
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .container_image {
-    display: flex;
-    position: relative;
-    width: 100%;
-
-    img {
-      opacity: 0%;
-      position: absolute;
-      object-fit: cover;
     }
   }
 }

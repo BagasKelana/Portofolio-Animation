@@ -11,6 +11,9 @@ import CarouselGallery from './carousel-gallery';
 import CompetenciesSection from './competencies-section';
 import LiveEmojiAnimation from './emoji-component';
 import TechStack from './tech-stack';
+import AutoGraph from './auto-graph';
+import AbilitiesSlider from './abilities-slider';
+import RandomWordEffect from '../RandomWordEffect';
 
 const AboutMe = () => {
   const downloadResume = () => {
@@ -27,7 +30,16 @@ const AboutMe = () => {
   return (
     <section className={styles.aboutContainer}>
       <section>
-        <div className={styles.title}>ABOUT-ME</div>
+        <div className={styles.aboutTitle}>
+          <div className={styles.title}>ABOUT ME</div>
+          <div className={styles.containerLineHight}>
+            <RandomWordEffect word="Based In Indonesia" />
+            <div className={styles.lineHighlight} />
+            <RandomWordEffect word="Journey Of Life" />
+            <div className={styles.lineHighlight} />
+            <RandomWordEffect word="Curious People" />
+          </div>
+        </div>
         <div className={styles.aboutCards}>
           <section className={styles.leftCard}>
             <div className={styles.myBackground}>
@@ -45,8 +57,8 @@ const AboutMe = () => {
                 </div>
               </section>
             </div>
-
             <TechStack />
+            <AutoGraph />
           </section>
           <section className={styles.centerCard}>
             <div className={styles.photoContainer}>
@@ -58,6 +70,7 @@ const AboutMe = () => {
               />
               <LiveEmojiAnimation />
             </div>
+            <AbilitiesSlider />
             <CarouselGallery />
           </section>
           <section className={styles.rightCard}>
@@ -83,7 +96,7 @@ const AboutMe = () => {
                   </div>
                   <div>
                     <p className={styles.lightParaf}>
-                      Marine Science ( Bachelor of Science )
+                      Marine Science (Bachelor of Science)
                     </p>
                     <p className={styles.darkParaf}>
                       Trunojoyo University, Madura
@@ -164,8 +177,8 @@ const AboutMe = () => {
                   <div>
                     <p className={styles.lightParaf}>Portfolio Website</p>
                     <p className={styles.darkParaf}>
-                      My Personal Portotfolio Website Builded with NextJS and
-                      Framework Animation
+                      Personal Portfolio Site Developed with Next.js and
+                      Animation Framework
                     </p>
                   </div>
                 </section>
@@ -175,9 +188,7 @@ const AboutMe = () => {
                   </div>
                   <div>
                     <p className={styles.lightParaf}>NEXT Courses Website</p>
-                    <p className={styles.darkParaf}>
-                      learning service provider site
-                    </p>
+                    <p className={styles.darkParaf}>Online Learning Platform</p>
                   </div>
                 </section>
                 <section>
@@ -187,7 +198,18 @@ const AboutMe = () => {
                   <div>
                     <p className={styles.lightParaf}>E-Commerce Website</p>
                     <p className={styles.darkParaf}>
-                      learning service provider site
+                      Online Marketplace for Buying Various Products
+                    </p>
+                  </div>
+                </section>
+                <section>
+                  <div className={styles.listYear}>
+                    <p>2022-2023</p>
+                  </div>
+                  <div>
+                    <p className={styles.lightParaf}>Cahyadi Rental Mobil</p>
+                    <p className={styles.darkParaf}>
+                      Yogyakarta-based Car Rental Service Provider Website
                     </p>
                   </div>
                 </section>
@@ -198,7 +220,8 @@ const AboutMe = () => {
                   <div>
                     <p className={styles.lightParaf}>Axios Games</p>
                     <p className={styles.darkParaf}>
-                      Website Provide Information About Games
+                      Platform offering comprehensive information on diverse
+                      genres of games
                     </p>
                   </div>
                 </section>

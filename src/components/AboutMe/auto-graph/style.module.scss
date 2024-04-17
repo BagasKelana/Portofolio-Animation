@@ -1,0 +1,10 @@
+.containerAutoGraph {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+.containerAutoGraph > svg {
+  height: 200px;
+  width: 200px;
+}

@@ -180,14 +180,19 @@ body {
   background-color: var(--background-color);
   font-family: 'Helvetica Now Display', sans-serif;
   width: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
   max-width: 1536px;
   margin: auto;
   box-sizing: border-box;
   padding: 0;
+  color: white;
 }
 
 h1 {
   margin: 0;
   padding: 0;
+}
+
+.randomWord {
+  color: rgba(255, 255, 255, 0.295);
 }

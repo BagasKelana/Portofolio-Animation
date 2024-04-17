@@ -97,8 +97,14 @@ export default function LiveEmojiAnimation() {
 
   return (
     <div className={styles.liveEmojiContainer}>
-      <button onClick={handleEmojiClick}>
-        <Image src={imgSource} alt="hilal" height={50} width={50} />
+      <button className={styles.emojiButton} onClick={handleEmojiClick}>
+        <Image
+          id="heartSvg"
+          src={imgSource}
+          alt="hilal"
+          height={50}
+          width={50}
+        />
       </button>
       <div className={styles.emojiList} ref={emojiRef}></div>
     </div>

@@ -17,17 +17,42 @@
   box-sizing: border-box;
   padding: 20rem 0 0;
 
-  .title {
-    word-wrap: break-word;
-    text-align: center;
-    font-family: var(--anton-font);
-    letter-spacing: 1rem;
-    font-size: 28.4rem;
-    color: var(--secondary-color);
+  .aboutTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 4rem;
     line-height: 100%;
     width: 100%;
     padding: 0 0rem 15rem;
+
+    .title {
+      word-wrap: break-word;
+      text-align: center;
+      font-family: var(--anton-font);
+      letter-spacing: 2rem;
+      font-size: 28.4rem;
+      color: var(--secondary-color);
+      line-height: 100%;
+      width: 100%;
+    }
+
+    .containerLineHight {
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      gap: 0.8rem;
+      color: white;
+
+      .lineHighlight {
+        height: 0.2rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.075);
+      }
+    }
   }
 
   h2 {
@@ -133,6 +158,7 @@
     border: var(--border-style);
   }
   .photoContainer > img {
+    padding: 0.1rem;
     width: 100%;
     height: auto;
     position: absolute;

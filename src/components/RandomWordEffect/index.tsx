@@ -1,6 +1,6 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
-import styles from './page.module.scss';
+import { useEffect, useRef } from 'react';
+import styles from './style.module.scss';
 
 const alpha = [
   '!',
@@ -30,7 +30,7 @@ const alpha = [
 interface WordProps {
   word: string;
 }
-const Word: React.FC<WordProps> = ({ word }) => {
+const RandomWordEffect: React.FC<WordProps> = ({ word }) => {
   const letters = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
@@ -63,7 +63,10 @@ const Word: React.FC<WordProps> = ({ word }) => {
     const animateWord = () => {
       letters.current.forEach((letter, i) => {
         setTimeout(() => {
-          animateLetter(letter, 10 - i);
+          animateLetter(
+            letter,
+            letters.current.length - i <= 5 ? 5 : letters.current.length - i
+          );
         }, 100 * i);
       });
     };
@@ -81,36 +84,21 @@ const Word: React.FC<WordProps> = ({ word }) => {
   }, [word]);
 
   return (
-    <span className="word">
-      {word.split('').map((letter, index) => (
-        <span
-          key={letter + index}
-          ref={(el) => (letters.current[index] = el as HTMLSpanElement)}
-          className="letter"
-          data-letter={letter}
-        >
-          {letter}
-        </span>
-      ))}
-    </span>
-  );
-};
-
-interface RandomLetterEffectProps {
-  sentence: string;
-}
-
-const RandomLetterEffect: React.FC<RandomLetterEffectProps> = ({
-  sentence
-}) => {
-  const sentence1 = 'HILAL BAGAS KELANA';
-  return (
-    <div className={styles.haloguys}>
-      <div className="words">
-        <Word word={'HILAL'} />
-      </div>
+    <div className={styles.containerRandomWord}>
+      <span className="word">
+        {word.split('').map((letter, index) => (
+          <span
+            key={letter + index}
+            ref={(el) => (letters.current[index] = el as HTMLSpanElement)}
+            className="letter"
+            data-letter={letter}
+          >
+            {letter}
+          </span>
+        ))}
+      </span>
     </div>
   );
 };
 
-export default RandomLetterEffect;
+export default RandomWordEffect;
