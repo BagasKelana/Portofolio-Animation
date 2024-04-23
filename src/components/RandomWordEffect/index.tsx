@@ -67,7 +67,7 @@ const RandomWordEffect: React.FC<WordProps> = ({ word }) => {
             letter,
             letters.current.length - i <= 5 ? 5 : letters.current.length - i
           );
-        }, 100 * i);
+        }, 50 * i);
       });
     };
 

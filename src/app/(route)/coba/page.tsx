@@ -1,116 +1,56 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+
+import InstagramIcon from '@/app/assets/svg/instagram';
 import styles from './page.module.scss';
+import Github from '@/app/assets/svg/github';
+import LinkedinIcon from '@/app/assets/svg/linkedin';
+import YoutubeIcon from '@/app/assets/svg/youtube';
+import staticPhoto from '@/IMG_0990.jpg';
+import Image from 'next/image';
+import CurveLine from '@/components/ui/CurveLine/CurveLine';
 
-const alpha = [
-  '!',
-  '#',
-  '$',
-  '0',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  'A',
-  'G',
-  'T',
-  'H',
-  'Y',
-  'Z',
-  'X',
-  'W',
-  'O',
-  'K',
-  'Q',
-  'S'
-];
-
-interface WordProps {
-  word: string;
-}
-const Word: React.FC<WordProps> = ({ word }) => {
-  const letters = useRef<HTMLSpanElement[]>([]);
-
-  useEffect(() => {
-    //fungsion random letter
-    const animateLetter = (letter: HTMLSpanElement, iteration: number) => {
-      //get original letter using getAttribute
-      const original = letter.getAttribute('data-letter') as string;
-      letter.classList.add('randomWord');
-      let i = 0;
-
-      const letterInterval = setInterval(() => {
-        const randomLetter = alpha[Math.floor(Math.random() * alpha.length)];
-        letter.textContent = randomLetter;
-
-        //condition if the letter has been changed to equal iteration number / index === iteration
-        if (i === iteration) {
-          clearInterval(letterInterval);
-          //set letter to original letter
-          letter.textContent = original;
-          letter.classList.remove('randomWord');
-        }
-
-        ++i;
-      }, 40);
-
-      return () => clearInterval(letterInterval);
-    };
-
-    //fungsion setTimeout forEach Letter run animateLetter(letter)
-    const animateWord = () => {
-      letters.current.forEach((letter, i) => {
-        setTimeout(() => {
-          animateLetter(letter, 10 - i);
-        }, 100 * i);
-      });
-    };
-
-    const mouseEnterHandler = () => {
-      animateWord();
-    };
-
-    const wordElement = letters.current[0]?.closest('.word') as HTMLSpanElement;
-    wordElement.addEventListener('mouseenter', mouseEnterHandler);
-
-    return () => {
-      wordElement.removeEventListener('mouseenter', mouseEnterHandler);
-    };
-  }, [word]);
-
+const CompetenciesSection = () => {
   return (
-    <span className="word">
-      {word.split('').map((letter, index) => (
-        <span
-          key={letter + index}
-          ref={(el) => (letters.current[index] = el as HTMLSpanElement)}
-          className="letter"
-          data-letter={letter}
-        >
-          {letter}
-        </span>
-      ))}
-    </span>
-  );
-};
-
-interface RandomLetterEffectProps {
-  sentence: string;
-}
-
-const RandomLetterEffect: React.FC<RandomLetterEffectProps> = ({
-  sentence
-}) => {
-  const sentence1 = 'HILAL BAGAS KELANA';
-  return (
-    <div className={styles.haloguys}>
-      <div className="words">
-        <Word word={'HILAL'} />
-      </div>
+    <div className={styles.competenciesContainer}>
+      <section className={styles.connectSection}>
+        <div className={styles.connectTitle}>
+          <div className={styles.para1}>
+            <span>Let{"'"}s</span>
+            <div className={styles.containerPhotoOfMine}>
+              <Image src={staticPhoto} alt="photo of mine" />
+            </div>
+          </div>
+          <div className={styles.para2}>
+            <span>Connect</span>
+          </div>
+        </div>
+        <CurveLine />
+        <section className={styles.contactMe}>
+          <div>hilalbagas@gmail.com / +62-82141606613</div>
+          <section>
+            <ul>
+              <li>
+                <InstagramIcon />
+              </li>
+              <li>
+                <Github />
+              </li>
+              <li>
+                <LinkedinIcon />
+              </li>
+              <li>
+                <YoutubeIcon />
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section className={styles.footerSection}>
+        <div>@2024 Bagas Kelana</div>
+        <div>Powered by Vercel, Next.js, and GitHub.</div>
+      </section>
     </div>
   );
 };
 
-export default RandomLetterEffect;
+export default CompetenciesSection;

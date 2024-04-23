@@ -1,14 +1,15 @@
 .modalContainer {
-  height: calc(1rem * 2 + 45px);
-  width: calc(1rem * 2 + 45px);
+  height: calc(1.6rem * 2 + 45px);
+  width: calc(1.6rem * 2 + 45px);
   position: absolute;
-  background-color: white;
+  background-color: whitesmoke;
   overflow: hidden;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 4;
+  border-radius: 16px;
 }
 
 .modalSlider {
@@ -26,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 
 .cursor,

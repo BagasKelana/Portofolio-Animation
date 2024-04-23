@@ -38,7 +38,6 @@ export default function Modal() {
       duration: 0.8,
       ease: 'power3'
     });
-    //Move cursor
 
     //Move cursor label
     let xMoveCursorLabel = gsap.quickTo(cursorLabel.current, 'left', {

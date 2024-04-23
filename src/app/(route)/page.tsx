@@ -9,6 +9,9 @@ import { AnimatePresence } from 'framer-motion';
 import WorksSection from '@/components/Work';
 import Navbar from '@/components/Navbar';
 import Modal from '@/components/AboutMe/tech-stack/modal/modal';
+import Contact from '@/components/Contact';
+import InstagramIcon from '../assets/svg/instagram';
+import ContactMe from '@/components/Contact';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,11 +34,13 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
+
       <Navbar />
       <Landing />
       <Modal />
       <AboutMe />
       <WorksSection />
+      <ContactMe />
     </main>
   );
 }

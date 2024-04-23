@@ -154,7 +154,7 @@
 }
 
 :root {
-  --primary-color: #ff5934;
+  --primary-color: #ff552e;
   --secondary-color: white;
   --tertiary-color: rgba(255, 255, 255, 0.55);
   --background-color: #0f0f0f;
@@ -169,6 +169,7 @@
     rgba(24, 24, 24, 1) 0%,
     rgba(15, 15, 15, 1) 100%
   );
+  --padding-section: 20rem 0 0;
 }
 
 html {
@@ -191,8 +192,4 @@ body {
 h1 {
   margin: 0;
   padding: 0;
-}
-
-.randomWord {
-  color: rgba(255, 255, 255, 0.295);
 }

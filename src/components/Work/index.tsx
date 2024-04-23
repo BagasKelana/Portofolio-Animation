@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import worksAsset from '@/app/assets/static-images/works';
-
+import { assetWorks } from '@/app/assets/static-images/works';
 const WorksSection = () => {
   const container = useRef<HTMLDivElement | null>(null);
 
@@ -45,32 +45,74 @@ const WorksSection = () => {
   return (
     <section className={styles.worksContainer}>
       <div className={styles.spacer}>
-        <div className={styles.workTitle}>
-          IT AIN'T MUCH BUT IT'S PURE DEDICATION
+        <div className={styles.workTitle1}>
+          <p> IT AIN{"'"}T MUCH, BUT</p>
+          <p>
+            IT{"'"}S <span>PURE DEDICATION</span>
+          </p>
         </div>
       </div>
       <div ref={container} className={styles.stickyImagesContainer}>
-        <WorkImage img={worksAsset[0]} y={y} />
-        <WorkImage img={worksAsset[1]} y={y2} />
-        <WorkImage img={worksAsset[2]} y={y3} />
-        <WorkImage img={worksAsset[1]} y={y4} />
+        <WorkImage imgs={[assetWorks[0], assetWorks[1], assetWorks[2]]} y={y} />
+        <WorkImage
+          imgs={[assetWorks[3], assetWorks[4], assetWorks[5]]}
+          y={y2}
+        />
+        <WorkImage
+          imgs={[assetWorks[6], assetWorks[7], assetWorks[8]]}
+          y={y3}
+        />
+        <WorkImage
+          imgs={[assetWorks[9], assetWorks[10], assetWorks[11]]}
+          y={y4}
+        />
       </div>
-      <div className={styles.spacer}></div>
+      <div className={styles.spacer}>
+        <div className={styles.workTitle}>FEATURED PROJECT</div>
+      </div>
+      <div className={styles.workCardsContainer}>
+        <div className={styles.workCards}>
+          <div
+            style={{ backgroundImage: `url(/myskills-Images/58479.jpg)` }}
+            className={styles.workCard}
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url(/myskills-Images/16683378_5794854.jpg)`
+            }}
+            className={styles.workCard}
+          ></div>
+          <div
+            style={{ backgroundImage: `url(/myskills-Images/2149416723.jpg)` }}
+            className={styles.workCard}
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url(/myskills-Images/1688969506602.png)`
+            }}
+            className={styles.workCard}
+          ></div>
+        </div>
+      </div>
     </section>
   );
 };
 
 type WorkImageProps = {
   y: MotionValue<number>;
-  img: StaticImageData;
+  imgs: StaticImageData[];
 };
 
-const WorkImage: React.FC<WorkImageProps> = ({ y, img }) => {
+const WorkImage: React.FC<WorkImageProps> = ({ y, imgs }) => {
   return (
-    <motion.div style={{ y }} className={styles.column}>
-      <div className={styles.imageContainer}>
-        <Image src={img} alt={`image work number ${img.src}`} />
-      </div>
+    <motion.div className={styles.column} style={{ y }}>
+      {imgs.map((img) => {
+        return (
+          <div key={img.src} className={styles.imageContainer}>
+            <Image src={img} alt="image" fill />
+          </div>
+        );
+      })}
     </motion.div>
   );
 };

@@ -2,11 +2,6 @@
 import Image from 'next/image';
 import styles from './style.module.scss';
 import myPhoto from '@/my-photo.png';
-import Download from '@/app/assets/svg/download';
-import InstagramIcon from '@/app/assets/svg/instagram';
-import Github from '@/app/assets/svg/github';
-import LinkedinIcon from '@/app/assets/svg/linkedin';
-import YoutubeIcon from '@/app/assets/svg/youtube';
 import CarouselGallery from './carousel-gallery';
 import CompetenciesSection from './competencies-section';
 import LiveEmojiAnimation from './emoji-component';
@@ -14,24 +9,16 @@ import TechStack from './tech-stack';
 import AutoGraph from './auto-graph';
 import AbilitiesSlider from './abilities-slider';
 import RandomWordEffect from '../RandomWordEffect';
+import MediaIcon from './media-icon';
 
 const AboutMe = () => {
-  const downloadResume = () => {
-    const fileUrl =
-      '/Default_The_cute_explorer_boy_is_wearing_a_brown_shirt_under_a_0_43ef2ba5-3aa0-4035-bd6e-c144ef4de091_0 2.png';
-    const fileName = 'myresume.png';
-
-    const downloadLink = document.createElement('a');
-    downloadLink.href = fileUrl;
-    downloadLink.download = fileName;
-
-    downloadLink.click();
-  };
   return (
     <section className={styles.aboutContainer}>
-      <section>
+      <section className={styles.about}>
         <div className={styles.aboutTitle}>
-          <div className={styles.title}>ABOUT ME</div>
+          <div className={styles.title}>
+            <span>ABOUT</span>ME
+          </div>
           <div className={styles.containerLineHight}>
             <RandomWordEffect word="Based In Indonesia" />
             <div className={styles.lineHighlight} />
@@ -48,14 +35,7 @@ const AboutMe = () => {
                 developer, based in Lamongan, East Java, Indonesia. Currently
                 freelancing for website development.
               </p>
-              <section>
-                <div>
-                  <InstagramIcon /> <Github /> <LinkedinIcon /> <YoutubeIcon />
-                </div>
-                <div onClick={downloadResume}>
-                  <Download /> Resume
-                </div>
-              </section>
+              <MediaIcon />
             </div>
             <TechStack />
             <AutoGraph />
@@ -70,10 +50,6 @@ const AboutMe = () => {
               />
               <LiveEmojiAnimation />
             </div>
-            <AbilitiesSlider />
-            <CarouselGallery />
-          </section>
-          <section className={styles.rightCard}>
             <div className={styles.experience}>
               <div>
                 <h2>EDUCATION & TRAINING</h2>
@@ -116,7 +92,11 @@ const AboutMe = () => {
                 </section>
               </div>
             </div>
-            <div className={styles.experience}>
+
+            <CarouselGallery />
+          </section>
+          <section className={styles.rightCard}>
+            <section className={styles.experience}>
               <div>
                 <h2>INTERNSHIPS</h2>
               </div>
@@ -164,8 +144,8 @@ const AboutMe = () => {
                   </div>
                 </section>
               </div>
-            </div>
-            <div className={styles.experience}>
+            </section>
+            <section className={styles.experience}>
               <div>
                 <h2>EXPERIENCE (Base on Projects)</h2>
               </div>
@@ -226,6 +206,9 @@ const AboutMe = () => {
                   </div>
                 </section>
               </div>
+            </section>
+            <div>
+              <AbilitiesSlider />
             </div>
           </section>
         </div>

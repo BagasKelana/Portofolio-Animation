@@ -1,11 +1,7 @@
 'use client';
 
 import styles from './page.module.scss';
-import Lottie, {
-  LottieOptions,
-  useLottie,
-  useLottieInteractivity
-} from 'lottie-react';
+import Lottie, { useLottie, useLottieInteractivity } from 'lottie-react';
 import robotAnimation from '@/lotties/html.json';
 import { CSSProperties } from 'react';
 const style: CSSProperties = {

@@ -1,8 +1,6 @@
 'use client';
 import styles from './page.module.scss';
-import { useState } from 'react';
 import { svgAssets } from '@/app/assets/svg/svg-assets';
-import Modal from './modal/modal';
 import FloatSvg from './float-svg/floatSvg';
 
 const TechStack = () => {

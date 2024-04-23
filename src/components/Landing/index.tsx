@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { slideUp } from './animation';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import InstagramIcon from '@/app/assets/svg/instagram';
 
 export default function Home() {
   const firstText = useRef(null);
