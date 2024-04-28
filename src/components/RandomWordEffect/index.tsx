@@ -33,59 +33,49 @@ interface WordProps {
 const RandomWordEffect: React.FC<WordProps> = ({ word }) => {
   const letters = useRef<HTMLSpanElement[]>([]);
 
-  useEffect(() => {
-    //fungsion random letter
-    const animateLetter = (letter: HTMLSpanElement, iteration: number) => {
-      //get original letter using getAttribute
-      const original = letter.getAttribute('data-letter') as string;
-      letter.classList.add('randomWord');
-      let i = 0;
+  //fungsion setTimeout forEach Letter run animateLetter(letter)
+  const animateWord = () => {
+    letters.current.forEach((letter, i) => {
+      setTimeout(() => {
+        animateLetter(
+          letter,
+          letters.current.length - i <= 5 ? 5 : letters.current.length - i
+        );
+      }, 50 * i);
+    });
+  };
 
-      const letterInterval = setInterval(() => {
-        const randomLetter = alpha[Math.floor(Math.random() * alpha.length)];
-        letter.textContent = randomLetter;
+  const animateLetter = (letter: HTMLSpanElement, iteration: number) => {
+    //get original letter using getAttribute
+    const original = letter.getAttribute('data-letter') as string;
+    letter.classList.add('randomWord');
+    let i = 0;
 
-        //condition if the letter has been changed to equal iteration number / index === iteration
-        if (i === iteration) {
-          clearInterval(letterInterval);
-          //set letter to original letter
-          letter.textContent = original;
-          letter.classList.remove('randomWord');
-        }
+    const letterInterval = setInterval(() => {
+      const randomLetter = alpha[Math.floor(Math.random() * alpha.length)];
+      letter.textContent = randomLetter;
 
-        ++i;
-      }, 40);
+      //condition if the letter has been changed to equal iteration number / index === iteration
+      if (i === iteration) {
+        clearInterval(letterInterval);
+        //set letter to original letter
+        letter.textContent = original;
+        letter.classList.remove('randomWord');
+      }
 
-      return () => clearInterval(letterInterval);
-    };
+      ++i;
+    }, 40);
 
-    //fungsion setTimeout forEach Letter run animateLetter(letter)
-    const animateWord = () => {
-      letters.current.forEach((letter, i) => {
-        setTimeout(() => {
-          animateLetter(
-            letter,
-            letters.current.length - i <= 5 ? 5 : letters.current.length - i
-          );
-        }, 50 * i);
-      });
-    };
+    return () => clearInterval(letterInterval);
+  };
 
-    const mouseEnterHandler = () => {
-      animateWord();
-    };
-
-    const wordElement = letters.current[0]?.closest('.word') as HTMLSpanElement;
-    wordElement.addEventListener('mouseenter', mouseEnterHandler);
-
-    return () => {
-      wordElement.removeEventListener('mouseenter', mouseEnterHandler);
-    };
-  }, [word]);
+  const handleOnMouseEnter = () => {
+    animateWord();
+  };
 
   return (
     <div className={styles.containerRandomWord}>
-      <span className="word">
+      <span onMouseEnter={handleOnMouseEnter} className="word">
         {word.split('').map((letter, index) => (
           <span
             key={letter + index}

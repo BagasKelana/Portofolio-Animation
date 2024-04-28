@@ -14,99 +14,12 @@
     justify-content: center;
     width: 100%;
     position: relative;
-
-    .itemMask {
-      position: absolute;
-      mask-position: center;
-      height: 750px;
-      width: 100%;
-      mask-image: url('/Mask group.svg');
-      mask-repeat: no-repeat;
-      z-index: 4;
-
-      .sliderContainer {
-        top: 58%;
-      }
-
-      .slider > p {
-        color: var(--primary-color);
-      }
-    }
-
-    img {
-      object-position: center;
-      object-fit: cover;
-      z-index: 2;
-      filter: grayscale(100%) contrast(105%);
-    }
-
-    .sliderContainer {
-      right: -400px;
-      position: absolute;
-      top: 60%;
-    }
-
-    .slider {
-      position: relative;
-      white-space: nowrap;
-      will-change: transform;
-    }
-
-    .slider > p {
-      font-family: var(--anton-font);
-      position: relative;
-      margin: 0px;
-      color: var(--secondary-color);
-      font-size: calc(10dvw + 2.4rem);
-      font-weight: 400;
-      padding-right: 25px;
-      letter-spacing: 1rem;
-      will-change: transform;
-    }
-
-    .slider > p:nth-of-type(2) {
-      position: absolute;
-      left: 100%;
-      top: 0;
-    }
-
-    .description {
-      position: absolute;
-      top: 35%;
-      left: 65%;
-      color: white;
-      font-size: 24px;
-      font-weight: 300;
-      p {
-        margin: 0px;
-        margin-bottom: 10px;
-      }
-      svg {
-        transform: scale(2);
-        margin-bottom: 100px;
-      }
-    }
   }
-}
 
-@media only screen and (max-width: 1200px) {
-  .landingContainer {
-    .landing {
-      .slider p {
-        color: var(--secondary-color);
-        font-size: calc(100dvh / 4);
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .landingContainer {
-    .landing {
-      .slider p {
-        color: var(--secondary-color);
-        font-size: calc(100dvh / 4);
-      }
-    }
+  .landing > img {
+    object-position: center;
+    object-fit: cover;
+    z-index: 2;
+    filter: grayscale(100%) contrast(105%);
   }
 }

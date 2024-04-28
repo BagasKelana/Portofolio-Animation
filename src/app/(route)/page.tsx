@@ -9,8 +9,7 @@ import { AnimatePresence } from 'framer-motion';
 import WorksSection from '@/components/Work';
 import Navbar from '@/components/Navbar';
 import Modal from '@/components/AboutMe/tech-stack/modal/modal';
-import Contact from '@/components/Contact';
-import InstagramIcon from '../assets/svg/instagram';
+
 import ContactMe from '@/components/Contact';
 
 export default function Home() {
@@ -19,14 +18,14 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      new LocomotiveScroll();
 
       setTimeout(() => {
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
         document.body.style.overflow = 'auto';
-      }, 2000);
+      }, 2500);
     })();
   }, []);
   return (

@@ -1,0 +1,7 @@
+.rightCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 31%;
+  max-width: calc(31% - 3.2rem);
+}

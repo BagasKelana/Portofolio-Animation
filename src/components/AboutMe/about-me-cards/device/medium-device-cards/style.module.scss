@@ -1,0 +1,54 @@
+.rightCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 50%;
+  max-width: calc(50% - 3.2rem);
+
+  .photoContainer {
+    border-radius: 1.6rem;
+    height: calc(30dvh + 30dvw);
+    overflow: hidden;
+    position: relative;
+    border: var(--border-style);
+  }
+  .photoContainer > img {
+    padding: 0.1rem;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -8rem;
+    object-fit: cover;
+  }
+}
+
+.leftCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 50%;
+  max-width: calc(50% - 3.2rem);
+
+  .myBackground {
+    height: fit-content;
+    border: var(--border-style);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem 3rem;
+    background: var(--card-color);
+    border-radius: 1.6rem;
+  }
+  .myBackground > p {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 2.3rem;
+    margin: 0;
+    line-height: 150%;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+}

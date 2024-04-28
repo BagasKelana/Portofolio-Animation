@@ -166,7 +166,7 @@
   --card-color: rgba(255, 255, 255, 0.03);
   --background-circle: radial-gradient(
     circle,
-    rgba(24, 24, 24, 1) 0%,
+    rgb(42, 42, 42) 0%,
     rgba(15, 15, 15, 1) 100%
   );
   --padding-section: 20rem 0 0;

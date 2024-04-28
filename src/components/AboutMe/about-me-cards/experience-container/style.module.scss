@@ -1,0 +1,22 @@
+.experience {
+  background-color: var(--card-color);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: var(--border-style);
+  padding: 2rem 2rem;
+  color: var(--secondary-color);
+  border-radius: 1.6rem;
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.experience > div:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+

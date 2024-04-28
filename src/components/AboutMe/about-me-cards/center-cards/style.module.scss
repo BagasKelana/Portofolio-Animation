@@ -1,0 +1,23 @@
+.centerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 33%;
+  max-width: 33%;
+
+  .photoContainer {
+    border-radius: 1.6rem;
+    height: 55rem;
+    overflow: hidden;
+    position: relative;
+    border: var(--border-style);
+  }
+  .photoContainer > img {
+    padding: 0.1rem;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -8rem;
+    object-fit: cover;
+  }
+}

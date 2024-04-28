@@ -10,19 +10,19 @@ export default function CurveLine() {
   let reqId: number | null = null;
 
   useEffect(() => {
-    setPath(progress);
-  }, []);
+    const setPath = (progress: number) => {
+      const width = document.documentElement.clientWidth * 0.95;
+      if (path.current) {
+        path.current.setAttributeNS(
+          null,
+          'd',
+          `M0 250 Q${width * x} ${250 + progress}, ${width} 250`
+        );
+      }
+    };
 
-  const setPath = (progress: number) => {
-    const width = document.documentElement.clientWidth * 0.95;
-    if (path.current) {
-      path.current.setAttributeNS(
-        null,
-        'd',
-        `M0 250 Q${width * x} ${250 + progress}, ${width} 250`
-      );
-    }
-  };
+    setPath(progress);
+  }, [progress, x]);
 
   const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 

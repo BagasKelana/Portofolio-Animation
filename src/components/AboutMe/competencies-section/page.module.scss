@@ -29,7 +29,6 @@
 
 .containerCompetencies {
   width: calc(90% + 4rem);
-  padding: 0rem 3rem;
   display: flex;
   gap: 3rem;
   height: fit-content;
@@ -89,11 +88,24 @@
 
 @media only screen and (max-width: 1200px) {
   .containerCompetencies {
-    padding: 0rem 2rem;
+    width: 96%;
     display: flex;
     gap: 3rem;
     height: fit-content;
     flex-direction: column;
+
+    .competenciesCard {
+      position: relative;
+      display: flex;
+      background-color: var(--card-color);
+      height: 80dvh;
+      flex-grow: 100;
+      transition: all 0.5s ease-in-out;
+      box-sizing: border-box;
+      border: var(--border-style);
+      overflow: hidden;
+      border-radius: 1.6rem;
+    }
   }
 
   .competenciesTitle {

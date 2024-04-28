@@ -18,16 +18,18 @@ export default function AbilitiesSlider() {
   const xPercent = useRef(0);
 
   const animate = useCallback(() => {
-    if (xPercent.current < -100) {
-      xPercent.current = 0;
-    } else if (xPercent.current > 0) {
-      xPercent.current = -100;
-    }
-    gsap.set(abilities1.current, { xPercent: xPercent.current });
-    gsap.set(abilities2.current, { xPercent: xPercent.current });
+    if (abilities1.current && abilities2.current) {
+      if (xPercent.current < -100) {
+        xPercent.current = 0;
+      } else if (xPercent.current > 0) {
+        xPercent.current = -100;
+      }
+      gsap.set(abilities1.current, { xPercent: xPercent.current });
+      gsap.set(abilities2.current, { xPercent: xPercent.current });
 
-    requestAnimationFrame(animate);
-    xPercent.current += 0.2 * -1;
+      requestAnimationFrame(animate);
+      xPercent.current += 0.2 * -1;
+    }
   }, []);
 
   useLayoutEffect(() => {
