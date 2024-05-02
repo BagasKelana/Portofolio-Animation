@@ -9,7 +9,7 @@ interface Props {
 
 export default function RoundedButton({
   title,
-  backgroundColor = '#455CE9'
+  backgroundColor = '#ff633f'
 }: Props): JSX.Element {
   const circle = useRef<HTMLDivElement>(null);
   const timeline = useRef<gsap.core.Timeline | null>(null);

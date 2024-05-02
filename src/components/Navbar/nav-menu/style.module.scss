@@ -1,0 +1,44 @@
+.navMenu {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.8rem 3.2rem;
+  border-radius: 24px;
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%) translateY(200%);
+  -webkit-transform: translateX(-50%) translateY(200%);
+  -moz-transform: translateX(-50%) translateY(200%);
+  -ms-transform: translateX(-50%) translateY(200%);
+  -o-transform: translateX(-50%) translateY(200%);
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
+.navMenu > ul {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  transform-origin: 50% 50% 0;
+  justify-content: center;
+
+  li {
+    position: relative;
+    padding: 0.4rem 0.8rem;
+    transform-origin: 50% 50% 0;
+    font-size: 1.4rem;
+    letter-spacing: 17%;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  li:hover {
+    color: white;
+  }
+}

@@ -14,7 +14,12 @@ const ColumnImages: React.FC<ColumnImagesProps> = ({ y, imgs }) => {
       {imgs.map((img) => {
         return (
           <div key={img.src} className={styles.imageContainer}>
-            <Image src={img} alt="image" fill />
+            <Image
+              src={img}
+              alt="image"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         );
       })}

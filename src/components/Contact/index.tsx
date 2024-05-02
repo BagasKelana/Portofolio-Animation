@@ -11,9 +11,9 @@ import CurveLine from '@/components/ui/CurveLine/CurveLine';
 
 const ContactMe = () => {
   return (
-    <div className={styles.contactMeContainer}>
+    <div id="CONTACT_CONTAINER" className={styles.contactMeContainer}>
       <section className={styles.connectSection}>
-        <div className={styles.connectTitle}>
+        <div id="CONTACT_SECTION" className={styles.connectTitle}>
           <div className={styles.para1}>
             <span>Let{"'"}s</span>
             <div className={styles.containerPhotoOfMine}>
@@ -30,13 +30,13 @@ const ContactMe = () => {
           <section>
             <ul>
               <li>
+                <LinkedinIcon />
+              </li>
+              <li>
                 <InstagramIcon />
               </li>
               <li>
                 <Github />
-              </li>
-              <li>
-                <LinkedinIcon />
               </li>
               <li>
                 <YoutubeIcon />
@@ -47,7 +47,7 @@ const ContactMe = () => {
       </section>
       <section className={styles.footerSection}>
         <div>@2024 Bagas Kelana</div>
-        <div>Powered by Vercel, Next.js, and GitHub.</div>
+        <div>Powered by Vercel, Next.js, and AI Image Generation.</div>
       </section>
     </div>
   );

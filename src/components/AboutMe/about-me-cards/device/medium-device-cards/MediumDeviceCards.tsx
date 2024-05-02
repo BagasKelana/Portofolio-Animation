@@ -46,6 +46,7 @@ const MediumDeviceCards = () => {
             data-scroll-speed={0.1}
             src={myPhoto}
             alt="my photo"
+            priority
           />
           <LiveEmojiAnimation />
         </div>

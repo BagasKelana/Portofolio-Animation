@@ -1,16 +1,14 @@
-'use client';
-
 import styles from './style.module.scss';
 import CompetenciesSection from './competencies-section';
 import AboutMeCards from './about-me-cards/AboutMeCards';
 
 const AboutMe = () => {
   return (
-    <section className={styles.aboutContainer}>
+    <section id="CONTAINER_ABOUT" className={styles.aboutContainer}>
       <section className={styles.about}>
         <div className={styles.aboutTitle}>
-          <div className={styles.title}>
-            <span>ABOUT</span>ME
+          <div id="ABOUT_SECTION" className={styles.title}>
+            ABOUT<span>ME</span>
           </div>
           {/* <div className={styles.containerLineHight}>
             <RandomWordEffect word="Based In Indonesia" />

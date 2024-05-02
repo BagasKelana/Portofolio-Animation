@@ -1,6 +1,6 @@
 'use client';
 import styles from './style.module.scss';
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect, useCallback } from 'react';
 
 export default function CurveLine() {
   const path = useRef<SVGPathElement | null>(null);
@@ -9,8 +9,8 @@ export default function CurveLine() {
   let time = Math.PI / 2;
   let reqId: number | null = null;
 
-  useEffect(() => {
-    const setPath = (progress: number) => {
+  const setPath = useCallback(
+    (progress: number) => {
       const width = document.documentElement.clientWidth * 0.95;
       if (path.current) {
         path.current.setAttributeNS(
@@ -19,10 +19,13 @@ export default function CurveLine() {
           `M0 250 Q${width * x} ${250 + progress}, ${width} 250`
         );
       }
-    };
+    },
+    [x]
+  );
 
+  useLayoutEffect(() => {
     setPath(progress);
-  }, [progress, x]);
+  }, [progress, setPath]);
 
   const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 

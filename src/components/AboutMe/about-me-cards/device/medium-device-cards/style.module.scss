@@ -8,6 +8,7 @@
   .photoContainer {
     border-radius: 1.6rem;
     height: calc(30dvh + 30dvw);
+    max-height: calc(100dvw / 2);
     overflow: hidden;
     position: relative;
     border: var(--border-style);

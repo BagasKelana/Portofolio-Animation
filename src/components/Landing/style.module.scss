@@ -1,25 +1,10 @@
 .landingContainer {
   background: var(--background-circle);
-  height: fit-content;
+  height: 120vh;
+  min-height: 120vh;
   width: 100%;
   display: flex;
-  height: fit-content;
   overflow: hidden;
   justify-content: center;
   position: relative;
-
-  .landing {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-  }
-
-  .landing > img {
-    object-position: center;
-    object-fit: cover;
-    z-index: 2;
-    filter: grayscale(100%) contrast(105%);
-  }
 }

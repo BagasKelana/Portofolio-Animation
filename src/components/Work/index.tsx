@@ -13,7 +13,10 @@ const WorksSection = () => {
         </p>
       </Spacer> */}
       <StickyImages />
-      <Spacer>FEATURED PROJECT</Spacer>
+      <Spacer id="WORK_SECTION">
+        <span>WORK</span>
+        <span>SPACE</span>
+      </Spacer>
       <WorkCards />
     </section>
   );

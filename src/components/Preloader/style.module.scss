@@ -7,6 +7,12 @@
   position: fixed;
   z-index: 99;
   background-color: transparent;
+  max-width: 1536px;
+  color: white;
+  padding: 0;
+  margin: auto;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
 
 .introduction > p {

@@ -23,7 +23,7 @@ const mySkillsAssets = [
 const CompetenciesSection = () => {
   return (
     <div className={styles.competenciesContainer}>
-      <div className={styles.competenciesTitle}>MY-SKILLS</div>
+      <div className={styles.competenciesTitle}>CAPABILITIES</div>
       <div className={styles.containerCompetencies}>
         {mySkillsAssets.map((asset) => (
           <div key={asset.title} className={styles.competenciesCard}>

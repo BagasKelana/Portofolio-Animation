@@ -1,5 +1,5 @@
 .aboutContainer > .about {
-  width: 100%;
+  width: 96%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,49 +16,8 @@
   border-top: var(--border-stylev2);
   box-sizing: border-box;
   padding: 10rem 0 0;
-
-  .aboutTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4rem;
-    line-height: 100%;
-    width: 100%;
-    padding: 0 0rem 10rem;
-
-    .title {
-      word-wrap: break-word;
-      text-align: center;
-      font-family: var(--anton-font);
-      letter-spacing: 1rem;
-      font-size: calc(11dvw + 8rem);
-      color: var(--secondary-color);
-      line-height: 100%;
-      width: 100%;
-    }
-
-    .title > span {
-      color: var(--primary-color);
-    }
-
-    .containerLineHight {
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      gap: 0.8rem;
-      color: rgba(255, 255, 255, 0.85);
-
-      .lineHighlight {
-        display: flex;
-        height: 0.2rem;
-        width: 30%;
-        background-color: rgba(255, 255, 255, 0.355);
-      }
-    }
-  }
+  box-shadow: rgba(8, 8, 8, 0.3) 0px 0px 4px 0px,
+    rgba(8, 8, 8, 0.6) 0px 0px 16px 0px;
 
   h2 {
     font-weight: bold;
@@ -66,5 +25,57 @@
     color: var(--secondary-color);
     padding: 0;
     margin: 0;
+  }
+}
+
+.aboutTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  line-height: 100%;
+  width: 100%;
+  padding: 0 0rem 10rem;
+
+  .title {
+    word-wrap: break-word;
+    text-align: center;
+    font-family: var(--anton-font);
+    letter-spacing: 1rem;
+    font-size: 30rem;
+    color: var(--secondary-color);
+    line-height: 100%;
+    width: 100%;
+  }
+
+  .title > span {
+    color: var(--primary-color);
+  }
+
+  .containerLineHight {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 0.8rem;
+    color: rgba(255, 255, 255, 0.85);
+
+    .lineHighlight {
+      display: flex;
+      height: 0.2rem;
+      width: 30%;
+      background-color: rgba(255, 255, 255, 0.355);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .aboutTitle {
+    .title {
+      letter-spacing: 0rem;
+      font-size: calc(130dvw / 5.2);
+    }
   }
 }

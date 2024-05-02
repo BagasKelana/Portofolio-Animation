@@ -1,8 +1,14 @@
 import styles from './style.module.scss';
 
-const Spacer = ({ children }: { children: React.ReactNode | string }) => {
+const Spacer = ({
+  children,
+  id
+}: {
+  children: React.ReactNode | string;
+  id: string;
+}) => {
   return (
-    <div className={styles.spacer}>
+    <div id={id} className={styles.spacer}>
       <div className={styles.workTitle}>{children}</div>
     </div>
   );

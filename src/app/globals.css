@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 @font-face {
   font-family: 'Helvetica Now Display';
   src: url('/fonts/HelveticaNowDisplay-Light.eot');
@@ -147,15 +149,9 @@
   font-style: normal;
 }
 
-@font-face {
-  src: url('/fonts/Anton-Regular.ttf') format('truetype');
-  font-family: 'Anton', sans-serif;
-  text-rendering: geometricPrecision;
-}
-
 :root {
-  --primary-color: #ff552e;
-  --secondary-color: white;
+  --primary-color: #ff633f;
+  --secondary-color: rgba(255, 255, 255, 0.85);
   --tertiary-color: rgba(255, 255, 255, 0.55);
   --background-color: #0f0f0f;
   --background-color1: #080b11;
@@ -166,27 +162,35 @@
   --card-color: rgba(255, 255, 255, 0.03);
   --background-circle: radial-gradient(
     circle,
-    rgb(42, 42, 42) 0%,
-    rgba(15, 15, 15, 1) 100%
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 100%
   );
   --padding-section: 20rem 0 0;
 }
+* {
+  box-sizing: border-box;
+}
 
+body,
 html {
   /* 62.5% of 16px user agent font size is 10px */
   font-size: 62.5%;
-}
-
-body {
   background-color: var(--background-color);
   font-family: 'Helvetica Now Display', sans-serif;
   width: 100%;
-  overflow: hidden;
   max-width: 1536px;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 0;
   color: white;
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: auto;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  display: block;
+  overflow: hidden;
 }
 
 h1 {

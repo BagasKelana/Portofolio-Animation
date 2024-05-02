@@ -1,4 +1,6 @@
-import styles from './style.module.scss';
+'use client';
+
+import infinityStyles from './style.module.scss';
 import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -66,8 +68,8 @@ const InfinityText = () => {
 
   return (
     <>
-      <div key={'ini slider'} className={styles.sliderContainer}>
-        <div ref={slider} className={styles.slider}>
+      <div key={'ini slider'} className={infinityStyles.sliderContainer}>
+        <div ref={slider} className={infinityStyles.slider}>
           <p key={12} ref={firstText}>
             WELCOME TO MY PORTFOLIO -
           </p>
@@ -77,9 +79,14 @@ const InfinityText = () => {
         </div>
       </div>
 
-      <div data-scroll data-scroll-speed={0.1} className={styles.itemMask}>
-        <div key={'ini slider123'} className={styles.sliderContainer}>
-          <div ref={slider1} className={styles.slider}>
+      <div className={infinityStyles.itemMask}>
+        <div
+          data-scroll
+          data-scroll-speed={0.1}
+          key={'ini slider123'}
+          className={infinityStyles.sliderContainer}
+        >
+          <div ref={slider1} className={infinityStyles.slider}>
             <p key={14} ref={firstTextMask}>
               WELCOME TO MY PORTFOLIO -
             </p>

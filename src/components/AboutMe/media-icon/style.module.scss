@@ -12,7 +12,9 @@
   align-items: center;
 }
 
-.media > svg {
-  width: 34px;
-  height: 34px;
+.media > a {
+  svg {
+    width: 34px;
+    height: 34px;
+  }
 }

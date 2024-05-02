@@ -4,9 +4,11 @@ import LeftCards from './left-cards/LeftCards';
 import CenterCards from './center-cards/CenterCards';
 import RightCards from './right-cards/RightCards';
 import styles from './style.module.scss';
-import { useMediaQuery } from '@uidotdev/usehooks';
+
 import MediumDeviceCards from './device/medium-device-cards/MediumDeviceCards';
 import SmallDeviceCards from './device/small-device-cards/SmallDeviceCards';
+import { useMediaQuery } from '@/hook/useMediaQuery';
+import { useLayoutEffect, useState } from 'react';
 
 const AboutMeCards = () => {
   const isMediumDevice = useMediaQuery(
@@ -14,25 +16,34 @@ const AboutMeCards = () => {
   );
   const isLargeDevice = useMediaQuery('only screen and (min-width : 1201px)');
 
-  const mediaQuery = () => {
+  const [iniElement, setIniElement] = useState(
+    <>
+      <LeftCards />
+      <CenterCards />
+      <RightCards />
+    </>
+  );
+
+  useLayoutEffect(() => {
     if (isLargeDevice) {
-      return (
+      setIniElement(
         <>
           <LeftCards />
           <CenterCards />
           <RightCards />
         </>
       );
+      return;
     }
 
     if (isMediumDevice) {
-      return <MediumDeviceCards />;
+      setIniElement(<MediumDeviceCards />);
+      return;
     }
 
-    return <SmallDeviceCards />;
-  };
-
-  return <div className={styles.aboutCards}>{mediaQuery()}</div>;
+    setIniElement(<SmallDeviceCards />);
+  }, [isLargeDevice, isMediumDevice]);
+  return <div className={styles.aboutCards}>{iniElement}</div>;
 };
 
 export default AboutMeCards;

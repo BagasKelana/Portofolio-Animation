@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion';
 
-export const slideUp: Variants = {
+export const zoomOut: Variants = {
   initial: {
     scale: 1.8
   },
@@ -10,12 +10,13 @@ export const slideUp: Variants = {
   }
 };
 
-export const zoom = {
+export const slideIn = {
   initial: {
-    y: 400
+    y: '-100%',
+    x: '50%'
   },
   enter: {
     y: 0,
-    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.5 }
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 3.2 }
   }
 };
