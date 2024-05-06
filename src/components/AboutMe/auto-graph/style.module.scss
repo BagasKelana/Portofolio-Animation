@@ -7,4 +7,9 @@
 .containerAutoGraph > svg {
   height: 200px;
   width: 200px;
+
+  path {
+  }
+  filter: 'drop-shadow(0 0 10px white)';
+  -webkit-filter: 'drop-shadow(0 0 10px white)';
 }

@@ -1,15 +1,53 @@
 import { create } from 'zustand';
 
+type ModalData = {
+  index: number;
+  active: boolean;
+  title: string;
+  activeContainer: boolean;
+  modalType: 'workCard' | 'floatSvg';
+};
+
 type TechModalProps = {
-  modalData: { index: number; active: boolean; title: string };
-  handleMouseEnter: (index: number, title: string) => void;
-  handleMouseLeave: (index: number, title: string) => void;
+  modalData: ModalData;
+
+  enterContainer: () => void;
+  leaveContainer: () => void;
+  handleMouseEnter: (
+    index: number,
+    title: string,
+    modalType: 'workCard' | 'floatSvg'
+  ) => void;
+  handleMouseLeave: (
+    index: number,
+    title: string,
+    modalType: 'workCard' | 'floatSvg'
+  ) => void;
 };
 
 export const useModalSvg = create<TechModalProps>((set) => ({
-  modalData: { active: false, index: 0, title: '' },
-  handleMouseEnter: (index, title) =>
-    set({ modalData: { active: true, index: index, title: title } }),
-  handleMouseLeave: (index, title) =>
-    set({ modalData: { active: false, index: index, title: title } })
+  modalData: {
+    active: false,
+    index: 0,
+    title: '',
+    activeContainer: false,
+    modalType: 'floatSvg'
+  },
+  activeContainer: false,
+  handleMouseEnter: (index = 0, title, modalType) =>
+    set((state) => ({
+      modalData: { ...state.modalData, active: true, index, title, modalType }
+    })),
+  handleMouseLeave: (index = 0, title, modalType) =>
+    set((state) => ({
+      modalData: { ...state.modalData, active: false, index, title, modalType }
+    })),
+  enterContainer: () =>
+    set((state) => ({
+      modalData: { ...state.modalData, activeContainer: true }
+    })),
+  leaveContainer: () =>
+    set((state) => ({
+      modalData: { ...state.modalData, activeContainer: false }
+    }))
 }));

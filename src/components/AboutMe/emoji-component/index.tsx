@@ -80,7 +80,6 @@ export default function LiveEmojiAnimation() {
           '<'
         );
 
-      //
       const ImageWrapper = () => (
         <Image
           priority

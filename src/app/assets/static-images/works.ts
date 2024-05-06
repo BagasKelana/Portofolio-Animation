@@ -1,6 +1,3 @@
-import work1 from '@/assetWorks/axiosGames.png';
-import work2 from '@/assetWorks/Next-Courses.png';
-import work3 from '@/assetWorks/portofolio.png';
 import img1 from '@/assetWorks/sliceImages/1.jpg';
 import img2 from '@/assetWorks/sliceImages/2.jpg';
 import img3 from '@/assetWorks/sliceImages/3.jpg';
@@ -13,7 +10,6 @@ import img9 from '@/assetWorks/sliceImages/9.jpg';
 import img10 from '@/assetWorks/sliceImages/10.jpg';
 import img11 from '@/assetWorks/sliceImages/11.jpg';
 import img12 from '@/assetWorks/sliceImages/12.jpg';
-const worksAsset = [work1, work2, work3];
 
 export const assetWorks = [
   img1,
@@ -29,5 +25,3 @@ export const assetWorks = [
   img11,
   img12
 ];
-
-export default worksAsset;

@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.mediaSection > a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
 .mediaSection > .media {
   display: flex;
   gap: 0.8rem;
@@ -14,7 +19,7 @@
 
 .media > a {
   svg {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
   }
 }

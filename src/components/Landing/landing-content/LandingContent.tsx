@@ -17,7 +17,7 @@ const LandingContent = () => {
     offset: ['start start', 'end start']
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-0, 620]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 550]);
   return (
     <>
       <motion.nav

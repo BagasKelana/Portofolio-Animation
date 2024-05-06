@@ -1,12 +1,14 @@
 .itemMask {
   position: absolute;
   mask-position: center;
-  height: 120dvh;
+  height: 100%;
+  min-height: 748px;
   width: 100%;
   mask-image: url('/Mask group.svg');
   mask-repeat: no-repeat;
-  mask-size: auto 120dvh;
+  mask-size: auto 748px;
   z-index: 4;
+  pointer-events: none;
 
   .sliderContainer {
     right: -400px;
@@ -25,6 +27,7 @@
 }
 
 .sliderContainer {
+  pointer-events: none;
   right: -400px;
   position: absolute;
   top: 60%;

@@ -13,10 +13,10 @@ export default function FloatSvg({ index, title }: FloatSvgProps) {
     <div
       className={styles.tech}
       onMouseEnter={() => {
-        handleMouseEnter(index, title);
+        handleMouseEnter(index, title, 'floatSvg');
       }}
       onMouseLeave={() => {
-        handleMouseLeave(index, title);
+        handleMouseLeave(index, title, 'floatSvg');
       }}
     >
       <div className={styles.techContent}>{title}</div>

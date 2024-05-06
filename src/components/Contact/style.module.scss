@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: var(--padding-section);
+  position: relative;
 }
 
 .connectSection {
@@ -31,22 +32,6 @@
   height: fit-content;
   gap: 1.2rem;
   align-items: center;
-}
-
-.containerPhotoOfMine {
-  display: flex;
-  position: relative;
-  width: 34.2rem;
-  height: 23rem;
-  overflow: hidden;
-  border-radius: 1.6rem;
-  border: var(--border-style);
-
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .para2 {
@@ -109,22 +94,6 @@
     letter-spacing: 0.6rem;
     color: var(--secondary-color);
   }
-
-  .containerPhotoOfMine {
-    display: flex;
-    position: relative;
-    width: calc(50vw / 2);
-    height: calc(50vw / 3);
-    overflow: hidden;
-    border-radius: 1.6rem;
-    border: var(--border-style);
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -159,21 +128,5 @@
     line-height: 100%;
     letter-spacing: 0.6rem;
     color: var(--secondary-color);
-  }
-
-  .containerPhotoOfMine {
-    display: flex;
-    position: relative;
-    width: calc(50vw / 2);
-    height: calc(50vw / 3);
-    overflow: hidden;
-    border-radius: 1.6rem;
-    border: var(--border-style);
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
   }
 }

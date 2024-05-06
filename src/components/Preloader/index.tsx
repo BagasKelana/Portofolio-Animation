@@ -20,7 +20,7 @@ export default function Preloader() {
             100
           );
           ref.current.textContent = `${currentValue.current} %`;
-          const delay = Math.floor(Math.random() * 200) + 50;
+          const delay = Math.floor(Math.random() * 180) + 50;
           setTimeout(updateCounter, delay);
         }
       };

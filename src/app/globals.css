@@ -1,154 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Light.eot');
-  src: local('Helvetica Now Display Light'), local('HelveticaNowDisplay-Light'),
-    url('/fonts/HelveticaNowDisplay-Light.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Light.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Light.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-ExtLt.eot');
-  src: local('Helvetica Now Display ExtLt'), local('HelveticaNowDisplay-ExtLt'),
-    url('/fonts/HelveticaNowDisplay-ExtLt.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-ExtLt.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-ExtLt.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-ExtLt.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-ExtBlk.eot');
-  src: local('Helvetica Now Display ExtBlk'),
-    local('/fonts/HelveticaNowDisplay-ExtBlk'),
-    url('/fonts/HelveticaNowDisplay-ExtBlk.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-ExtBlk.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-ExtBlk.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-ExtBlk.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Bold.eot');
-  src: local('Helvetica Now Display Bold'), local('HelveticaNowDisplay-Bold'),
-    url('/fonts/HelveticaNowDisplay-Bold.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Bold.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Bold.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Regular.eot');
-  src: local('Helvetica Now Display Regular'),
-    local('/fonts/HelveticaNowDisplay-Regular'),
-    url('/fonts/HelveticaNowDisplay-Regular.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Regular.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Regular.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Thin.eot');
-  src: local('Helvetica Now Display Thin'), local('HelveticaNowDisplay-Thin'),
-    url('/fonts/HelveticaNowDisplay-Thin.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Thin.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Thin.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-ExtraBold.eot');
-  src: local('Helvetica Now Display ExtBd'),
-    local('HelveticaNowDisplay-ExtraBold'),
-    url('/fonts/HelveticaNowDisplay-ExtraBold.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-ExtraBold.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-ExtraBold.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Medium.eot');
-  src: local('Helvetica Now Display Medium'),
-    local('/fonts/HelveticaNowDisplay-Medium'),
-    url('/fonts/HelveticaNowDisplay-Medium.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Medium.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Medium.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Black.eot');
-  src: local('Helvetica Now Display Black'), local('HelveticaNowDisplay-Black'),
-    url('/fonts/HelveticaNowDisplay-Black.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Black.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Black.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Hairline.eot');
-  src: local('Helvetica Now Display Hairline'),
-    local('HelveticaNowDisplay-Hairline'),
-    url('/fonts/HelveticaNowDisplay-Hairline.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Hairline.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Hairline.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Hairline.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('/fonts/HelveticaNowDisplay-Hairline.eot');
-  src: local('Helvetica Now Display Hairline'),
-    local('HelveticaNowDisplay-Hairline'),
-    url('/fonts/HelveticaNowDisplay-Hairline.eot?#iefix')
-      format('embedded-opentype'),
-    url('/fonts/HelveticaNowDisplay-Hairline.woff2') format('woff2'),
-    url('/fonts/HelveticaNowDisplay-Hairline.woff') format('woff'),
-    url('/fonts/HelveticaNowDisplay-Hairline.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
 :root {
   --primary-color: #ff633f;
   --secondary-color: rgba(255, 255, 255, 0.85);
@@ -159,10 +8,10 @@
   --border-style: 1px solid rgba(255, 255, 255, 0.05);
   --border-stylev2: 1px solid rgba(255, 255, 255, 0.05);
   --inside-color: rgb(48, 48, 48);
-  --card-color: rgba(255, 255, 255, 0.03);
+  --card-color: rgba(255, 255, 255, 0.045);
   --background-circle: radial-gradient(
     circle,
-    rgb(50, 50, 50) 0%,
+    rgb(70, 70, 70) 0%,
     rgb(0, 0, 0) 100%
   );
   --padding-section: 20rem 0 0;
@@ -176,7 +25,7 @@ html {
   /* 62.5% of 16px user agent font size is 10px */
   font-size: 62.5%;
   background-color: var(--background-color);
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: var(--font-helveticaNowDisplay);
   width: 100%;
   max-width: 1536px;
   color: white;
@@ -196,4 +45,12 @@ body {
 h1 {
   margin: 0;
   padding: 0;
+}
+
+.ayolah {
+  transition: 0.5s all ease-out;
+  -webkit-transition: 0.5s all ease-out;
+  -moz-transition: 0.5s all ease-out;
+  -ms-transition: 0.5s all ease-out;
+  -o-transition: 0.5s all ease-out;
 }

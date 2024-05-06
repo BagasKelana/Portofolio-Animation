@@ -1,5 +1,6 @@
 'use client';
 
+import Card from '@/components/ui/Card/Card';
 import styles from './page.module.scss';
 
 const mySkillsAssets = [
@@ -26,17 +27,14 @@ const CompetenciesSection = () => {
       <div className={styles.competenciesTitle}>CAPABILITIES</div>
       <div className={styles.containerCompetencies}>
         {mySkillsAssets.map((asset) => (
-          <div key={asset.title} className={styles.competenciesCard}>
-            <div
-              style={{ backgroundImage: `url(${asset.img})` }}
-              className={styles.innerCard}
-            />
-            <div
-              style={{ backgroundImage: `url(${asset.img})` }}
-              className={styles.contentCompetencies}
-            />
-            <div className={styles.cardTitle}>{asset.title}</div>
-          </div>
+          <Card
+            className="competenciesCard"
+            key={asset.title}
+            backgroundUrl={asset.img}
+            imgUrl={asset.img}
+          >
+            {asset.title}
+          </Card>
         ))}
       </div>
     </div>

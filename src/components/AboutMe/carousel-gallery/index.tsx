@@ -43,7 +43,7 @@ export default function CarouselGallery() {
         <div className={styles.embla__container}>
           {gallerys.map((gallery) => (
             <div key={gallery.src} className={styles.embla__slide}>
-              <Image src={gallery} alt="gallery" priority />
+              <Image src={gallery} alt="gallery" loading="lazy" />
             </div>
           ))}
         </div>

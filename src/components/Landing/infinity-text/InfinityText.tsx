@@ -1,19 +1,37 @@
 'use client';
 
 import infinityStyles from './style.module.scss';
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import useWindowDimension from '@/hook/useWindowDimensions';
 
 const InfinityText = () => {
+  const windowSize = useWindowDimension();
+
   const firstText = useRef(null);
   const secondText = useRef(null);
   const firstTextMask = useRef(null);
   const secondTextMask = useRef(null);
   const slider = useRef(null);
   const slider1 = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
+  let xPercent = useRef(0);
+  let direction = useRef(-1);
+
+  const animate = useCallback(() => {
+    if (xPercent.current < -100) {
+      xPercent.current = 0;
+    } else if (xPercent.current > 0) {
+      xPercent.current = -100;
+    }
+    gsap.set(firstText.current, { xPercent: xPercent.current });
+    gsap.set(secondText.current, { xPercent: xPercent.current });
+    gsap.set(firstTextMask.current, { xPercent: xPercent.current });
+    gsap.set(secondTextMask.current, { xPercent: xPercent.current });
+
+    requestAnimationFrame(animate);
+    xPercent.current += 0.06 * direction.current;
+  }, []);
 
   useLayoutEffect(() => {
     if (
@@ -31,8 +49,7 @@ const InfinityText = () => {
           start: 0,
           end: window.innerHeight,
 
-          // eslint-disable-next-line react-hooks/exhaustive-deps
-          onUpdate: (e) => (direction = e.direction * -1)
+          onUpdate: (e) => (direction.current = e.direction * -1)
         },
         x: '-400px'
       });
@@ -49,22 +66,7 @@ const InfinityText = () => {
 
       requestAnimationFrame(animate);
     }
-  }, [direction]);
-
-  const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
-    }
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    gsap.set(firstTextMask.current, { xPercent: xPercent });
-    gsap.set(secondTextMask.current, { xPercent: xPercent });
-
-    requestAnimationFrame(animate);
-    xPercent += 0.06 * direction;
-  };
+  }, [animate, direction]);
 
   return (
     <>
@@ -79,7 +81,14 @@ const InfinityText = () => {
         </div>
       </div>
 
-      <div className={infinityStyles.itemMask}>
+      <div
+        style={{
+          maskSize: `${
+            (windowSize[1] * 120) / 100 > 748 ? 'auto 120dvh' : 'auto 748px'
+          }`
+        }}
+        className={infinityStyles.itemMask}
+      >
         <div
           data-scroll
           data-scroll-speed={0.1}

@@ -28,7 +28,7 @@ export const curtainDown = {
   },
   exit: {
     bottom: '-50vh',
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }
+    transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 }
   }
 };
 
@@ -38,6 +38,6 @@ export const curtainUp = {
   },
   exit: {
     top: '-50vh',
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }
+    transition: { duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 }
   }
 };

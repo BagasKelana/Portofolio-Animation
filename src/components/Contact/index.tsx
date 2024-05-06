@@ -1,13 +1,11 @@
-'use client';
-
 import InstagramIcon from '@/app/assets/svg/instagram';
 import styles from './style.module.scss';
 import Github from '@/app/assets/svg/github';
 import LinkedinIcon from '@/app/assets/svg/linkedin';
 import YoutubeIcon from '@/app/assets/svg/youtube';
 import staticPhoto from '@/IMG_0990.jpg';
-import Image from 'next/image';
 import CurveLine from '@/components/ui/CurveLine/CurveLine';
+import ImageEffect from '../ui/ImageEffect/ImageEffect';
 
 const ContactMe = () => {
   return (
@@ -16,9 +14,7 @@ const ContactMe = () => {
         <div id="CONTACT_SECTION" className={styles.connectTitle}>
           <div className={styles.para1}>
             <span>Let{"'"}s</span>
-            <div className={styles.containerPhotoOfMine}>
-              <Image src={staticPhoto} alt="photo of mine" />
-            </div>
+            <ImageEffect img={staticPhoto} />
           </div>
           <div className={styles.para2}>
             <span>Connect</span>
