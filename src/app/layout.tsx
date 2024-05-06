@@ -88,6 +88,12 @@ export const metadata: Metadata = {
     siteName: 'Bagas Kelana',
     images: 'https://bagaskelana.vercel.app/screenshotWebsite.PNG',
     type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bagas Kelana - Portfolio Website',
+    description: 'An open source e-commerce project built by inifarhan',
+    images: ['https://bagaskelana.vercel.app/screenshotWebsite.PNG']
   }
 };
 
