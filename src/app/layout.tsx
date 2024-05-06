@@ -54,13 +54,15 @@ const helveticaNowDisplay = localFont({
       style: 'normal',
       path: '/assets/fonts/HelveticaNowDisplay-Regular.woff2'
     }
-  ]
+  ],
+  preload: true
 });
 
 const anton = Anton({
   variable: '--anton-font',
   weight: '400',
-  subsets: ['latin']
+  subsets: ['latin'],
+  preload: true
 });
 
 export const metadata: Metadata = {
