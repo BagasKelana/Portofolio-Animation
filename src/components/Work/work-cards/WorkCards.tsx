@@ -31,7 +31,7 @@ const asset = [
     ),
     url: 'https://github.com/BagasKelana/E-Commerce-Colab',
     gradient:
-      'radial-gradient( circle 382px  at  50% 50.2%, rgba(23,205,205,1) 0.1%, rgba(23,25,95,1) 100.2% )'
+      'radial-gradient( circle 382px  at  50% 50.2%, rgb(35, 151, 151) 0.1%, rgb(14, 15, 61) 100.2% )'
   },
   {
     title: 'Cahyadi Rental Car',

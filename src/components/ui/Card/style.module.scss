@@ -2,26 +2,27 @@
   position: relative;
   display: flex;
   background-color: var(--card-color);
-  height: 100dvh;
+  height: 80dvh;
   min-height: 64rem;
   width: 100%;
   transition: all 0.5s ease-in-out;
-  box-sizing: border-box;
   border: var(--border-style);
   overflow: hidden;
   border-radius: 1.6rem;
 
   .contentCompetencies {
     position: absolute;
+    opacity: 93%;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 86%;
-    height: 28%;
+    width: 80%;
+    height: 30%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.35s ease-in-out;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -37,11 +38,10 @@
   position: relative;
   display: flex;
   background-color: var(--card-color);
-  height: 100dvh;
+  height: 80dvh;
   min-height: 64rem;
   flex-grow: 100;
   transition: all 0.5s ease-in-out;
-  box-sizing: border-box;
   border: var(--border-style);
   overflow: hidden;
   border-radius: 1.6rem;
@@ -52,7 +52,7 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 80%;
-    height: 30%;
+    height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
