@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Bagas Kelana - Portfolio Website',
     description:
-      "Welcome to my portfolio! I'm a web developer specializing in responsive design, intuitive user experiences, and optimal performance. Explore my projects showcasing expertise in both frontend and backend development, as well as my proficiency with various technologies like HTML, CSS, JavaScript, and more.",
+      "I'm a web developer with strong focus on web animation & responsive design.",
     url: 'https://bagaskelana.vercel.app/',
     siteName: 'Bagas Kelana',
     images: ['https://bagaskelana.vercel.app/screenshotWebsite.PNG'],
@@ -92,7 +92,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Bagas Kelana - Portfolio Website',
-    description: 'An open source e-commerce project built by inifarhan',
+    description:
+      "I'm a web developer with strong focus on web animation & responsive design.",
     images: ['https://bagaskelana.vercel.app/screenshotWebsite.PNG']
   }
 };
