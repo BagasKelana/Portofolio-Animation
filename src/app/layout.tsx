@@ -76,7 +76,19 @@ export const metadata: Metadata = {
     'React JS',
     'Next JS'
   ],
-  creator: 'M Hilal Bagas Kelana'
+  category: 'portfolio',
+  authors: { name: 'Bagas Kelana' },
+  creator: 'M Hilal Bagas Kelana',
+  publisher: 'M Hilal Bagas Kelana',
+  openGraph: {
+    title: 'Bagas Kelana - Portfolio Website',
+    description:
+      "Welcome to my portfolio! I'm a web developer specializing in responsive design, intuitive user experiences, and optimal performance. Explore my projects showcasing expertise in both frontend and backend development, as well as my proficiency with various technologies like HTML, CSS, JavaScript, and more.",
+    url: 'https://bagaskelana.vercel.app/',
+    siteName: 'Bagas Kelana',
+    images: 'https://bagaskelana.vercel.app/screenshotWebsite.PNG',
+    type: 'website'
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
