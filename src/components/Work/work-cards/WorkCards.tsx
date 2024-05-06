@@ -11,12 +11,13 @@ const asset = [
     description: (
       <>
         <span>Role : Full-Stack </span>
-        <span> Tech : TypeScript, Next JS, Tailwind CSS & Prisma ORM</span>
+        <span>Tech : TypeScript, Next JS, Tailwind CSS & Prisma ORM</span>
+        <span>Year : 2024</span>
       </>
     ),
     url: 'https://github.com/aglana123/next-course',
     gradient:
-      'radial-gradient( circle farthest-corner at 10% 20%,  rgb(50, 43, 115) 0%, rgba(4,0,4,1) 90% )'
+      'radial-gradient( circle 382px  at  50% 50.2%,  rgb(50, 43, 115) 0.1%,  rgba(4,0,4,1) 100.2% )'
   },
   {
     title: 'E-Commerce Website',
@@ -25,11 +26,12 @@ const asset = [
       <>
         <span>Role : Frontend </span>
         <span>Tech : TypeScript, React JS, Tailwind CSS & Laravel Api</span>
+        <span>Year : 2024</span>
       </>
     ),
     url: 'https://github.com/BagasKelana/E-Commerce-Colab',
     gradient:
-      'linear-gradient( 65.5deg,  rgba(23,205,205,1) -15.1%, rgba(23,25,95,1) 71.5% )'
+      'radial-gradient( circle 382px  at  50% 50.2%, rgba(23,205,205,1) 0.1%, rgba(23,25,95,1) 100.2% )'
   },
   {
     title: 'Cahyadi Rental Car',
@@ -38,11 +40,12 @@ const asset = [
       <>
         <span>Role : Frontend </span>
         <span>Tech : Inertia Js, React JS, Tailwind CSS & Laravel</span>
+        <span>Year : 2023</span>
       </>
     ),
     url: '',
     gradient:
-      ' radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% )'
+      'radial-gradient( circle 382px  at  50% 50.2%,  rgba(5,8,114,1) 0.1%, rgba(7,3,53,1) 100.2%  )'
   },
   {
     title: 'Axios Games',
@@ -51,6 +54,7 @@ const asset = [
       <>
         <span>Role : Full-Stack </span>
         <span>Tech : React JS, Tailwind CSS, Express JS & MongoDB</span>
+        <span>Year : 2023</span>
       </>
     ),
     url: 'https://github.com/BagasKelana/MERN-Astoxgames-Project',
