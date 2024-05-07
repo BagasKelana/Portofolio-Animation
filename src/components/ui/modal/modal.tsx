@@ -19,6 +19,18 @@ const scaleAnimation = {
     x: '-50%',
     y: '-50%',
     transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] }
+  },
+  enterCursor: {
+    scale: 1,
+    x: '-50%',
+    y: '-50%',
+    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] }
+  },
+  closedCursor: {
+    scale: 0.3,
+    x: '-50%',
+    y: '-50%',
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] }
   }
 };
 
@@ -116,12 +128,15 @@ export default function Modal() {
       </motion.div>
 
       <motion.div
-        style={{ mixBlendMode: 'normal' }}
+        style={{
+          mixBlendMode: 'normal',
+          opacity: `${modalType === 'floatSvg' && active ? '0%' : '100%'}`
+        }}
         ref={cursor}
         className={styles.cursor}
         variants={scaleAnimation}
         initial="initial"
-        animate={modalType === 'workCard' && active ? 'enter' : 'closed'}
+        animate={active ? 'enterCursor' : 'closedCursor'}
       />
       <motion.div
         style={{
