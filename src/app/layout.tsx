@@ -58,10 +58,10 @@ const helveticaNowDisplay = localFont({
   preload: true
 });
 
-const anton = Anton({
+const anton = localFont({
+  src: '/assets/fonts/Anton-Regular.woff2',
   variable: '--anton-font',
   weight: '400',
-  subsets: ['latin'],
   preload: true
 });
 
