@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar';
 import './globals.css';
 import localFont from 'next/font/local';
-import { Anton } from 'next/font/google';
 import { ReactNode } from 'react';
 import Modal from '@/components/ui/modal/modal';
 import { Metadata } from 'next';
